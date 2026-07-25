@@ -111,12 +111,9 @@ p{max-width:var(--measure)}
 .shot-caption{font-size:1rem;color:var(--fg);max-width:34ch;margin:0}
 .shot-caption strong{font-weight:650}
 
-/* Hero composition: one large shot + two supporting */
-.hero-shots{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;margin-top:44px;align-items:end}
+/* Hero composition: two equal shots side by side */
+.hero-shots{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px;max-width:540px}
 .hero-shots .shot-frame{box-shadow:0 26px 60px -28px rgba(0,0,0,.7)}
-.hero-shots .stack{display:grid;gap:22px}
-.hero-shots .stack .shot-frame{aspect-ratio:9/16}
-.hero-shots .stack .shot-frame img{object-position:center top}
 
 /* ---- Shot-type grid (YOUR / GROUP / LONG / SUPER) ---- */
 .shot-types{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:30px}
@@ -177,8 +174,6 @@ footer .legal{color:var(--on-dark)}
 @media (max-width:760px){
   .shots.three{grid-template-columns:repeat(2,1fr)}
   .shot-types{grid-template-columns:1fr}
-  .hero-shots{grid-template-columns:1fr;max-width:420px}
-  .hero-shots .stack{grid-template-columns:1fr 1fr}
 }
 @media (max-width:640px){
   body{font-size:16px}
